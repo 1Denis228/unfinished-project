@@ -1,0 +1,476 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+.bigred {
+  font-size: 20px;
+  color: red;
+}
+
+.off-scroll {
+  overflow: hidden;
+}
+
+.panel-display-none {
+  display: none;
+}
+
+.pnl-full-screen {
+  display: block;
+}
+
+.panel-default-full-screen {
+  background: white;
+  color: orange;
+  padding: 50px 15px 150px;
+  border: 1px solid white;
+}
+
+.container {
+  background: #f0f0f0;
+  padding: 35px 35px 0;
+}
+
+.content-container {
+  background: black;
+  border: 1px solid black;
+}
+
+.panel-default {
+  background: white;
+  padding: 50px 15px 150px;
+}
+
+.wrapper-dark-tools {
+  display: none;
+}
+
+.wrapper-light-tools {
+  display: block;
+}
+
+.panel-tools {
+  display: flex;
+  justify-content: right;
+}
+
+.panel-tools-item {
+  margin-right: 10px;
+}
+.panel-tools-item:last-child {
+  margin-right: 0;
+}
+
+.panel-time {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 70vh;
+}
+.panel-time .panel-time-date {
+  font-family: "Black Ops One", cursive;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.panel-time .panel-time-today-date {
+  font-family: "Black Ops One", cursive;
+  font-size: 32px;
+}
+.panel-time .panel-time-exact-time {
+  font-family: "Black Ops One", cursive;
+  font-size: 150px;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+.wrapper-exact-time {
+  display: flex;
+  justify-content: center;
+}
+.wrapper-exact-time .format-am-pm {
+  display: none;
+  font-size: 70px;
+  transform: translateY(70px);
+}
+
+.panel-tools-item:hover {
+  transform: scale(1.25);
+}
+
+.navbar {
+  background: #007abc;
+  position: sticky;
+  z-index: 99;
+  width: 100%;
+  min-height: 50px;
+}
+.navbar .nav-line {
+  max-width: 1800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+}
+
+.logo-title {
+  color: white;
+  font-family: "Darumadrop One", cursive;
+  font-size: 42px;
+  transform: translate(0, -15%);
+}
+
+.list-navbar {
+  display: flex;
+  color: white;
+  font-size: 22px;
+}
+.list-navbar .list-navbar_item {
+  margin-right: 40px;
+}
+.list-navbar .list-navbar_item:last-child {
+  margin-right: 0;
+}
+
+.list-navbar_item-text {
+  padding: 10px 5px;
+}
+
+.list-navbar_item-dropdown {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.list-navbar_item-dropdown:hover .dropdown-utilities {
+  display: block;
+}
+
+.list-navbar_item__day-night-hover:hover {
+  transform: scale(1.2);
+}
+
+.list-navbar_item__setting-hover:hover {
+  transform: scale(1.2);
+}
+
+.dropdown-utilities {
+  display: none;
+  z-index: 2;
+  position: absolute;
+  background: dimgray;
+  top: 40px;
+  left: 0;
+  padding: 20px;
+  margin-top: 2px;
+  border: 0;
+  border-radius: 3px;
+  margin-top: 2px;
+  border: 2px solid #c2e1f5;
+}
+
+.dropdown-utilities:after, .arrow_box:before {
+  bottom: 100%;
+  left: 30%;
+  border: solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.dropdown-utilities:after {
+  border-color: rgba(136, 183, 213, 0);
+  border-bottom-color: dimgray;
+  border-width: 15px;
+  margin-left: -15px;
+}
+
+.dropdown-utilities:before {
+  border-color: rgba(194, 225, 245, 0);
+  border-bottom-color: dimgray;
+  border-width: 18px;
+  margin-left: -18px;
+}
+
+.list-navbar_item-language {
+  position: relative;
+}
+
+.change-language-dropdown {
+  display: none;
+  z-index: 2;
+  position: absolute;
+  background: dimgray;
+  top: 40px;
+  left: 0;
+  padding: 20px;
+  margin-top: 2px;
+  border: 0;
+  border-radius: 3px;
+  margin-top: 2px;
+  border: 2px solid #c2e1f5;
+}
+
+.change-language-dropdown:after, .arrow_box:before {
+  bottom: 100%;
+  left: 30%;
+  border: solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.change-language-dropdown:after {
+  border-color: rgba(136, 183, 213, 0);
+  border-bottom-color: dimgray;
+  border-width: 10px;
+  margin-left: -15px;
+}
+
+.change-language-dropdown:before {
+  border-color: rgba(194, 225, 245, 0);
+  border-bottom-color: dimgray;
+  border-width: 18px;
+  margin-left: -18px;
+}
+
+.list-navbar_item-language:hover .change-language-dropdown {
+  display: block;
+}
+
+.dark-theme .dark-body {
+  color: dimgray;
+  background: black;
+}
+.dark-theme .dark-navbar {
+  background: #b80000;
+}
+.dark-theme .container {
+  background: black;
+}
+.dark-theme .panel-default {
+  background: black;
+  color: orange;
+  border: 1px solid white;
+}
+.dark-theme .wrapper-light-tools {
+  display: none;
+}
+.dark-theme .wrapper-dark-tools {
+  display: block;
+}
+
+.wrapper-menu {
+  transition: 1s;
+  transform: translate(100%);
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  right: 0;
+  height: 100%;
+  background: rgb(92, 90, 90);
+}
+
+.active-menu-option {
+  transition: 1s;
+  transform: translateX(0);
+}
+
+.wrapper-settings {
+  padding: 10px 20px 30px;
+  font-family: cursive;
+}
+.wrapper-settings h2 {
+  color: #e1e1e1;
+  font-size: 15px;
+  font-weight: 400;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #6d6b6b;
+  padding-left: 5px;
+  margin-bottom: 25px;
+  margin-top: 18px;
+  text-align: start;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 26px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 19px;
+  width: 19px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #38ae3c;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #38ae3c;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 13px;
+}
+.field label {
+  color: white;
+  margin-right: 30px;
+}
+.field .pull-right {
+  width: 53px;
+}
+
+.panel-colors {
+  display: flex;
+}
+
+.btn-digit-color {
+  width: 28px;
+  height: 28px;
+  border-radius: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.btn-digit-color :last-child {
+  margin-right: 0;
+}
+
+.icon-style-default {
+  background: currentColor;
+}
+
+.icon-style-active {
+  border: 3px solid currentColor;
+  background: transparent;
+}
+
+.btn-digit-color::before {
+  content: "";
+  font-size: 28px;
+}
+
+body {
+  font-family: "Darumadrop One", cursive;
+}
+
+button {
+  background: transparent;
+}
+
+a {
+  color: inherit;
+}

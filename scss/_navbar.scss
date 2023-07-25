@@ -1,0 +1,170 @@
+// Стилизация панели навигации //
+
+.navbar {
+    background: #007abc;
+    position: sticky;
+    z-index: 99;
+    width: 100%;
+    min-height: 50px;
+
+    .nav-line {
+        max-width: 1800px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 50px;
+    }
+}
+
+// Стилизация логотипа //
+
+.logo-title {
+    color: white;
+    font-family: 'Darumadrop One', cursive;
+    font-size: 42px;
+    transform: translate(0, -15%);
+}
+
+// Стили для текста и иконок панели навигации //
+
+.list-navbar {
+    display: flex;
+    color: white;
+    font-size: 22px;
+
+    .list-navbar_item {
+        margin-right: 40px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+// Выравнивание текста по центру панели навигации //
+
+.list-navbar_item-text {
+    padding: 10px 5px;
+}
+
+// Стилизация окна с утилитами //
+
+.list-navbar_item-dropdown {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &:hover .dropdown-utilities {
+        display: block;
+    }
+}
+
+// Cтилизация наведения на иконку смены темы //
+
+.list-navbar_item__day-night-hover:hover {
+    transform: scale(1.2);
+}
+
+// Cтилизация наведения на иконку настроек //
+
+.list-navbar_item__setting-hover:hover {
+    transform: scale(1.2);
+}
+
+// Cтили всплывающего блока с утилитами // 
+
+.dropdown-utilities {
+    display: none;
+    z-index: 2;
+    position: absolute;
+    background: dimgray;
+    top: 40px;
+    left: 0;
+    padding: 20px;
+    margin-top: 2px;
+    border: 0;
+    border-radius: 3px;
+    margin-top: 2px;
+    border: 2px solid #c2e1f5;
+}
+// Задаю стили треугольника для всплывающего блока с утилитами //
+
+.dropdown-utilities:after, .arrow_box:before {
+	bottom: 100%;
+	left: 30%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.dropdown-utilities:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-bottom-color: dimgray;
+	border-width: 15px;
+	margin-left: -15px;
+}
+.dropdown-utilities:before {
+	border-color: rgba(194, 225, 245, 0);
+	border-bottom-color: dimgray;
+	border-width: 18px;
+	margin-left: -18px;
+}
+
+// Стилизация дефолтного языка //
+
+.list-navbar_item-language {
+    position: relative;
+}
+
+// Стилизация всплывающего окна для языков //
+
+.change-language-dropdown {
+    display: none;
+    z-index: 2;
+    position: absolute;
+    background: dimgray;
+    top: 40px;
+    left: 0;
+    padding: 20px;
+    margin-top: 2px;
+    border: 0;
+    border-radius: 3px;
+    margin-top: 2px;
+    border: 2px solid #c2e1f5;
+}
+
+// Задаю стили треугольника для всплывающего блока с утилитами //
+
+.change-language-dropdown:after, .arrow_box:before {
+	bottom: 100%;
+	left: 30%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.change-language-dropdown:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-bottom-color: dimgray;
+	border-width: 10px;
+	margin-left: -15px;
+}
+.change-language-dropdown:before {
+	border-color: rgba(194, 225, 245, 0);
+	border-bottom-color: dimgray;
+	border-width: 18px;
+	margin-left: -18px;
+}
+
+// Стили вспли всплывающей панели при наведении на дефолтный язык //
+
+.list-navbar_item-language:hover .change-language-dropdown {
+    display: block;
+}

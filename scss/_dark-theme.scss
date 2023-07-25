@@ -1,0 +1,31 @@
+
+
+.dark-theme {
+
+    .dark-body {
+        color: dimgray;
+        background: black;
+    }
+
+    .dark-navbar {
+        background: #b80000;
+    }
+
+    .container {
+        background: black;
+    }
+
+    .panel-default {
+        background: black;
+        color: orange;
+        border: 1px solid white;
+    }
+
+    .wrapper-light-tools {
+        display: none;
+    }
+
+    .wrapper-dark-tools {
+        display: block;
+    }
+}

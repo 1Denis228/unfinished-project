@@ -1,0 +1,100 @@
+.off-scroll {
+    overflow: hidden;
+}
+
+.panel-display-none {
+    display: none;
+}
+
+.pnl-full-screen {
+    display: block;
+}
+
+.panel-default-full-screen {
+    background: white;
+    color: orange;
+    padding: 50px 15px 150px;
+    border: 1px solid white;
+}
+
+.container {
+    background: #f0f0f0;
+    padding: 35px 35px 0 ;
+}
+
+.content-container {
+    background: black;
+    border: 1px solid black;
+}
+
+.panel-default {
+    background: white;
+    padding: 50px 15px 150px;
+
+}
+
+.wrapper-dark-tools {
+    display: none;
+}
+
+.wrapper-light-tools {
+    display: block;
+}
+
+.panel-tools {
+    display: flex;
+    // margin-bottom: 100px;
+    justify-content: right;
+}
+
+.panel-tools-item {
+    margin-right: 10px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.panel-time {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70vh;
+
+    .panel-time-date {
+        font-family: 'Black Ops One', cursive;
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .panel-time-today-date {
+        font-family: 'Black Ops One', cursive;
+        font-size: 32px;
+    }
+
+    .panel-time-exact-time {
+        font-family: 'Black Ops One', cursive;
+        font-size: 150px;
+        margin-bottom: 15px;
+        margin-top: 20px;
+        
+    }
+}
+
+.wrapper-exact-time {
+    display: flex;
+    justify-content: center;
+
+    .format-am-pm {
+        display: none;
+        font-size: 70px;
+        transform: translateY(70px);
+    }
+}
+
+// Стилизация панели инструментов //
+
+.panel-tools-item:hover {
+    transform: scale(1.25);
+}

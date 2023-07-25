@@ -1,0 +1,190 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Darumadrop+One&display=swap" rel="stylesheet">
+</head>
+<body class="dark-body">
+    <div class="contant">
+        <div class="wrapper-menu">
+            <div class="wrapper-settings">
+                <h2>Налаштування</h2>
+                <div class="settings-options">
+                    <form action="">
+                        <div class="form-group-options">
+                            <div class="field">
+                                <label for="">Цифровой шрифт</label>
+                                <div class="pull-right">
+                                    <label class="switch">
+                                        <input type="checkbox" checked id="font-clock">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="">12-часовый (am/pm)</label>
+                                <div class="pull-right">
+                                    <label class="switch">
+                                        <input type="checkbox" checked id="format-time">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="">Показать дату</label>
+                                <div class="pull-right">
+                                    <label class="switch">
+                                        <input type="checkbox" checked id="show-date">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="">Ночной режим</label>
+                                <div class="pull-right">
+                                    <label class="switch">
+                                        <input type="checkbox" checked id="night-mode">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="panel-colors">
+                    <span class="btn-digit-color icon-style-default" style="color: #9c9c9c;" id="digit-color-0"></span>
+                    <span class="btn-digit-color icon-style-default" style="color: orange;" id="digit-color-1"></span>
+                    <span class="btn-digit-color icon-style-default" style="color: #d32f2f;" id="digit-color-2"></span>
+                    <span class="btn-digit-color icon-style-default" style="color: #388E3C;" id="digit-color-3"></span>
+                    <span class="btn-digit-color icon-style-default" style="color: #485d72;" id="digit-color-4"></span>
+                    <span class="btn-digit-color icon-style-default" style="color: #121314;" id="digit-color-4"></span>
+                    <span class="btn-digit-color icon-style-default" style="color: rgb(145, 12, 100);" id="digit-color-4"></span>
+                    <span class="btn-digit-color icon-style-default" style="color: #0ec41e;" id="digit-color-4"></span>
+                </div>
+            </div>
+        </div>
+        <header>
+            <nav class="navbar dark-navbar" >
+                <div class="nav-line">
+                    <div class="logo">
+                        <h1 class="logo-title">Dr.Time</h1>
+                    </div>
+                    <ul class="list-navbar">
+                        <li class="list-navbar_item list-navbar_item-text">
+                            <a href="#">Свята</a>
+                        </li>
+                        <li class="list-navbar_item list-navbar_item-text list-navbar_item-dropdown">
+                            <a href="#">Утиліти</a>
+                            <div class="dropdown-utilities">
+                                <ul class="utilities-list">
+                                    <li class="utilities-list-item"><a href="#">Будильник</a></li>
+                                    <li class="utilities-list-item"><a href="#">Таймер</a></li>
+                                    <li class="utilities-list-item"><a href="#">Секундомер</a></li>
+                                    <li class="utilities-list-item"><a href="#">Часы</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="list-navbar_item list-navbar_item-text list-navbar_item-language">
+                            <span class="default-language">UK</span>
+                            <div class="change-language-dropdown">
+                                <ul class="language-list">
+                                    <li>
+                                        <a href="#" value="uk">UK</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" value="ru">RU</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" value="en">EN</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="list-navbar_item list-navbar_item__day-night-hover">
+                            <button>
+                                <img src="img/header/navbar/day-night-icon.png" alt="light-black" class="button-color-theme" width="32px" height="32px">
+                            </button>
+                        </li>
+                        <li class="list-navbar_item list-navbar_item__setting-hover">
+                            <button>
+                                <img src="img/header/navbar/settings-icon.png" alt="settings" class="button-settings" width="32px" height="32px">
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="container">
+                <div class="content-container">
+                    <div class="panel-default">
+                        <div class="wrapper-light-tools">
+                            <ul class="panel-tools">
+                                <li class="panel-tools-item panel-tools-item__share "> 
+                                    <button>
+                                        <img src="img/header/tools-icon/share-light-mode.png" alt="share" id="share" class="hover-tools-item">
+                                    </button>
+                                </li>
+                                <li class="panel-tools-item panel-tools-item__minus">
+                                    <button>
+                                        <img src="img/header/tools-icon/minus-light-mode.png" alt="minus-icon" id="minus-icon" class="hover-tools-item">
+                                    </button>
+                                </li>
+                                <li class="panel-tools-item panel-tools-item__plus">
+                                    <button>
+                                        <img src="img/header/tools-icon/plus-light-mode.png" alt="plus-icon" id="plus-icon" class="hover-tools-item">
+                                    </button>
+                                </li>
+                                <li class="panel-tools-item panel-tools-item__resize">
+                                    <button>
+                                        <img src="img/header/tools-icon/resize-expand-light-mode.png" alt="resize-expand" id="resize-expand" class="hover-tools-item">
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="wrapper-dark-tools">
+                            <ul class="panel-tools">
+                                <li class="panel-tools-item panel-tools-item__share "> 
+                                    <button>
+                                        <img src="img/header/tools-icon/share.png" alt="share" id="share" class="hover-tools-item">
+                                    </button>
+                                </li>
+                                <li class="panel-tools-item panel-tools-item__minus">
+                                    <button>
+                                        <img src="img/header/tools-icon/minus.png" alt="minus-icon" id="minus-icon" class="hover-tools-item">
+                                    </button>
+                                </li>
+                                <li class="panel-tools-item panel-tools-item__plus">
+                                    <button>
+                                        <img src="img/header/tools-icon/plus.png" alt="plus-icon" id="plus-icon" class="hover-tools-item">
+                                    </button>
+                                </li>
+                                <li class="panel-tools-item panel-tools-item__resize">
+                                    <button>
+                                        <img src="img/header/tools-icon/resize-expand.png" alt="resize-expand" id="resize-expand" class="hover-tools-item">
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="panel-time">
+                            <h1 id="panel-time-date" class="panel-time-date color-digit">Точное время</h1>
+                            <div class="wrapper-exact-time">
+                                <h1 id="panel-time-exact-time" class="panel-time-exact-time color-digit"></h1>
+                                <span class="format-am-pm color-digit"></span>
+                            </div>
+                            <h1 id="panel-time-today-date" class="panel-time-today-date color-digit">Вторник , 6 июня 2023</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/exact-time.js"></script>
+</body>
+</html>
